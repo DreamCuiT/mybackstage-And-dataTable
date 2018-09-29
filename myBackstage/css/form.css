@@ -1,0 +1,174 @@
+.right-table {
+  height: 100%; }
+
+.info {
+  font-size: initial;
+  margin-top: .2rem; }
+
+.top-tit {
+  border-bottom: 1px solid #ddd;
+  line-height: .38rem;
+  box-sizing: border-box; }
+  .top-tit span {
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+    cursor: pointer;
+    font-size: .16rem;
+    margin-right: .05rem;
+    padding: .075rem .16rem;
+    box-sizing: border-box;
+    position: relative;
+    top: .02rem;
+    user-select: none; }
+  .top-tit span ~ span {
+    border: 1px solid transparent;
+    color: #0e90d2;
+    background-color: transparent; }
+
+.baseic-content {
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: .1rem;
+  overflow: hidden;
+  position: relative;
+  transition: height 2s; }
+  .baseic-content .base-ul li {
+    display: flex;
+    margin-top: .2rem;
+    align-items: center; }
+    .baseic-content .base-ul li div {
+      width: 12%;
+      padding: 0 .18rem;
+      text-align: right;
+      font-size: .16rem;
+      color: #333;
+      height: .25rem; }
+    .baseic-content .base-ul li select {
+      font-size: .16rem;
+      padding: .05rem .05rem; }
+  .baseic-content .base-ul li ~ li a {
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    border: 1px solid #d9d9d9;
+    font-size: .12rem;
+    line-height: .12rem;
+    color: #444;
+    position: relative; }
+    .baseic-content .base-ul li ~ li a span {
+      display: inline-block;
+      background-color: #e6e6e6;
+      padding: .075rem .12rem;
+      font-size: .12rem;
+      line-height: .12rem;
+      border-right: 1px solid #ddd; }
+    .baseic-content .base-ul li ~ li a i {
+      position: absolute;
+      left: .09rem;
+      top: 25%;
+      display: block;
+      margin-top: -.0635em;
+      line-height: 1;
+      z-index: 2; }
+    .baseic-content .base-ul li ~ li a input {
+      padding: .087rem .0975rem .0875rem .26rem;
+      border: 0; }
+    .baseic-content .base-ul li ~ li a span:hover {
+      background-color: #c7c7c7; }
+  .baseic-content .seo-ul {
+    width: 100%;
+    transform: translateX(100%);
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    opacity: 0; }
+    .baseic-content .seo-ul li {
+      display: flex;
+      margin-top: .2rem;
+      align-items: center; }
+      .baseic-content .seo-ul li div {
+        width: 12%;
+        padding: 0 .18rem;
+        text-align: right;
+        font-size: .16rem;
+        color: #333;
+        height: .25rem; }
+      .baseic-content .seo-ul li a {
+        display: inline-block;
+        vertical-align: middle;
+        box-sizing: border-box;
+        border: 1px solid #d9d9d9;
+        font-size: .12rem;
+        line-height: .12rem;
+        color: #444;
+        position: relative;
+        width: 25%; }
+        .baseic-content .seo-ul li a input {
+          padding: .087rem .0975rem .0875rem .0875rem;
+          border: 0; }
+    .baseic-content .seo-ul li + li + li {
+      display: flex;
+      align-items: flex-start; }
+      .baseic-content .seo-ul li + li + li textarea {
+        border-color: #ddd;
+        width: 25%;
+        padding: .087rem .0975rem .0875rem .0875rem; }
+  .baseic-content .pro-ul {
+    width: 100%;
+    transform: translateX(100%);
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    opacity: 0; }
+    .baseic-content .pro-ul li {
+      display: flex;
+      margin-top: .2rem;
+      align-items: center; }
+      .baseic-content .pro-ul li div {
+        width: 12%;
+        padding: 0 .18rem;
+        text-align: right;
+        font-size: .16rem;
+        color: #333;
+        height: .25rem; }
+      .baseic-content .pro-ul li a {
+        display: inline-block;
+        vertical-align: middle;
+        box-sizing: border-box;
+        border: 1px solid #d9d9d9;
+        font-size: .12rem;
+        line-height: .12rem;
+        color: #444;
+        position: relative;
+        width: auto; }
+        .baseic-content .pro-ul li a input {
+          padding: .087rem .0975rem .0875rem .0875rem;
+          border: 0; }
+      .baseic-content .pro-ul li a + div {
+        width: auto;
+        padding: 0 .18rem;
+        text-align: right;
+        font-size: .16rem;
+        color: #333;
+        height: .25rem; }
+    .baseic-content .pro-ul li + li + li + li + li {
+      display: flex;
+      align-items: flex-start; }
+      .baseic-content .pro-ul li + li + li + li + li textarea {
+        border-color: #ddd;
+        padding: .087rem .0975rem .0875rem .0875rem; }
+
+.refer {
+  margin: .2rem 0;
+  font-size: 0; }
+  .refer span {
+    display: inline-block;
+    padding: .075rem .12rem;
+    font-size: .12rem;
+    color: #fff;
+    background-color: #0e90d2;
+    cursor: pointer;
+    margin-right: .05rem; }

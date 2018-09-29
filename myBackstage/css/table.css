@@ -1,0 +1,171 @@
+.main {
+  min-height: 880px; }
+
+.right-table {
+  position: relative; }
+
+.crud {
+  display: flex;
+  justify-content: space-between;
+  margin-top: .2rem;
+  margin-bottom: .2rem; }
+  .crud > div {
+    display: flex; }
+    .crud > div p {
+      font-size: .12rem;
+      border: 1px solid #d9d9d9;
+      margin-right: .2rem; }
+      .crud > div p span {
+        display: inline-block;
+        font-size: .12rem;
+        padding: .075rem .1rem;
+        color: #444;
+        background: #e6e6e6;
+        border-right: 1px solid #d9d9d9; }
+        .crud > div p span i {
+          font-size: .12rem;
+          color: #444;
+          margin-right: .05rem; }
+  .crud div + div {
+    font-size: 0;
+    border: 1px solid #ccc; }
+    .crud div + div input {
+      height: 100%;
+      outline: none;
+      border: 0; }
+    .crud div + div input + input {
+      border-left: 1px solid #ccc;
+      padding: .06rem .12rem;
+      background-color: #e6e6e6; }
+
+table {
+  border-collapse: collapse; }
+  table thead tr {
+    border-bottom: 1px solid #ccc; }
+    table thead tr td {
+      width: 3%;
+      font-size: .14rem;
+      padding: .085rem .085rem;
+      font-weight: 600; }
+    table thead tr td + td {
+      width: 5%;
+      font-weight: 600;
+      font-size: .14rem;
+      padding: .085rem .085rem; }
+    table thead tr td + td + td {
+      font-weight: 600;
+      width: 21%;
+      font-size: .14rem;
+      padding: .085rem .085rem; }
+    table thead tr td + td + td + td {
+      font-weight: 600;
+      width: 8%;
+      font-size: .14rem;
+      padding: .085rem .085rem; }
+    table thead tr td + td + td + td + td {
+      font-weight: 600;
+      width: 10%;
+      font-size: .14rem;
+      padding: .085rem .085rem; }
+    table thead tr td + td + td + td + td + td {
+      font-weight: 600;
+      width: 21%;
+      font-size: .14rem;
+      padding: .085rem .085rem; }
+    table thead tr td + td + td + td + td + td + td {
+      font-weight: 600;
+      width: 28%;
+      font-size: .14rem;
+      padding: .085rem .085rem; }
+  table tbody tr {
+    border-top: 1px solid #ccc; }
+    table tbody tr td {
+      width: 3%;
+      font-size: .12rem;
+      padding: .085rem .085rem; }
+    table tbody tr td + td {
+      width: 5%;
+      font-size: .12rem;
+      padding: .085rem .085rem; }
+    table tbody tr td + td + td {
+      width: 21%;
+      font-size: .12rem;
+      padding: .085rem .085rem; }
+      table tbody tr td + td + td a {
+        color: #0e90d2; }
+    table tbody tr td + td + td + td {
+      width: 8%;
+      font-size: .12rem;
+      padding: .085rem .085rem; }
+    table tbody tr td + td + td + td + td {
+      width: 10%;
+      font-size: .12rem;
+      padding: .085rem .085rem; }
+    table tbody tr td + td + td + td + td + td {
+      width: 21%;
+      font-size: .12rem;
+      padding: .085rem .085rem; }
+    table tbody tr td + td + td + td + td + td + td {
+      width: 28%;
+      font-size: .12rem;
+      padding: .085rem .085rem; }
+      table tbody tr td + td + td + td + td + td + td P {
+        display: inline-block;
+        border: 1px solid #ccc; }
+        table tbody tr td + td + td + td + td + td + td P span {
+          display: inline-block;
+          padding: .075rem .12rem;
+          color: #3bb4f2;
+          background-color: #fff;
+          font-size: .12rem;
+          border-right: 1px solid #ccc;
+          cursor: pointer; }
+        table tbody tr td + td + td + td + td + td + td P span + span {
+          color: #444; }
+        table tbody tr td + td + td + td + td + td + td P span:hover {
+          color: #444;
+          background-color: #c7c7c7;
+          transition: background-color 100ms ease-in; }
+
+table + div {
+  position: absolute;
+  bottom: 0;
+  width: 98%; }
+  table + div div {
+    font-size: .16rem; }
+  table + div div + p {
+    height: .34rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: .2rem; }
+    table + div div + p i {
+      font-style: normal; }
+      table + div div + p i a {
+        display: block;
+        text-align: center;
+        padding: .04rem .08rem;
+        color: skyblue;
+        font-size: .16rem;
+        cursor: pointer;
+        border: 1px solid #ddd;
+        margin: 0 .1rem 0 0; }
+    table + div div + p span a {
+      display: block;
+      padding: .04rem .08rem;
+      color: skyblue;
+      font-size: .16rem;
+      cursor: pointer;
+      border: 1px solid #ddd;
+      margin: 0 .1rem 0 0; }
+    table + div div + p a:hover {
+      background-color: #eee; }
+  table + div P + div {
+    border-top: 1px solid #ccc;
+    padding: .16rem 0; }
+
+.last-td span i {
+  font-size: .12rem; }
+
+.last-td span + span + span {
+  color: #dd514c;
+  border: 0; }

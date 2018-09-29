@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/public.css">
+</head>
+<body>
+    <!-- header -->
+    <header></header>
+    <!-- main -->
+    <div class="main">
+        <!-- left-menu -->
+        <div class="left-menu"></div>
+        <!-- right-table -->
+        <div class="right-table">
+            <h3><span>表单</span>/<span></span></h3>
+            <div class="info">
+                <div class="top-tit">
+                    <span class="base">基本信息</span>
+                    <span class="pro">详细描述</span>
+                    <span class="seo">SEO选项</span>
+                </div>
+                <div class="baseic-content">
+                    <ul class="base-ul">
+                        <li><div>所属类别</div>
+                            <select name="" id="">
+                                <option value="">选项一</option>
+                                <option value="">选项二</option>
+                            </select>
+                        </li>
+                        <li><div>显示状态</div> <a href="#"><span>正常</span><span>待审核</span><span>不显示</span></a>
+                        </li>
+                        <li><div>推荐类型</div> <a href="#"><span>评论</span><span>置顶</span><span>推荐</span><span>热门</span><span>轮播图</span>
+                        </a></li>
+                        <li><div>发布时间</div> <a href="#"><i class="iconfont icon-rili"></i> <input type="text" placeholder="时间"></a></li>
+                    </ul>
+                    <ul class="seo-ul">
+                        <li><div>SEO标题</div><a href="#"><input type="text"></a></li>
+                        <li><div>SEO关键字</div><a href="#"><input type="text"></a></li>
+                        <li><div>SEO描述</div><textarea name="" id="" cols="30" rows="10" style="resize:none"></textarea></li>  
+                    </ul>
+                    <ul class="pro-ul">
+                        <li>
+                            <div>文章标题</div>
+                            <a href="#"><input type="text"></a>
+                            <div>*必填，不可重复</div>
+                        </li>
+                        <li>
+                            <div>文章作者</div>
+                            <a href="#"><input type="text"></a>
+                            <div>*必填，不可重复</div>
+                        </li>
+                        <li>
+                            <div>信息来源</div>
+                            <a href="#"><input type="text"></a>
+                            <div>选填</div>
+                        </li>
+                        <li>
+                            <div>内容摘要</div>
+                            <a href="#"><input type="text"></a>
+                            <div>不填写则自动截取内容前255字符</div>
+                        </li>
+                        <li><div>内容描述</div><textarea name="" id="" cols="30" rows="10" style="resize:none"></textarea></li>  
+                    </ul>
+                </div>
+            </div>
+            <div class="refer">
+                <span>提交保存</span>
+                <span>放弃保存</span>
+            </div>
+        </div>
+    </div>    
+    <!-- footer -->
+    <footer></footer>
+</body>
+</html>
+<!-- <script src="js/jquery-1.11.3.js"></script> -->
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/public.js"></script>
+<script>
+$(function(){
+    $("header").load("head.html")
+    $(".left-menu").load("main.html")
+    $("footer").load("foot.html")
+    $(".top-tit").find("span").each(function(i){
+        $(this).on("click",function(event){
+            event.preventDefault();
+            $(".top-tit").find("span").css({
+                "border":"1px solid transparent",
+                "color":"#0e90d2",
+                "background-color":"transparent"
+            })
+            $(this).css({
+                color: "#555",
+                "background-color": "#fff",
+                "border": "1px solid #ddd",
+                "border-bottom-color": "transparent",
+                "cursor": "pointer",
+                "font-size":".16rem",
+                "margin-right":".05rem",
+                "padding": ".075rem .16rem",
+                "box-sizing":"border-box",
+                "position": "relative",
+                "top":" .02rem"
+            })
+        })
+    })
+    $(".base").click(function(){
+        // $(".baseic-content").find("ul").addClass("cssmove")
+        $(".baseic-content").find("ul").css({
+            transform:"translateX(100%)",
+            visibility: "hidden",
+            opacity: 0,
+            "z-index": 1,
+            position: "absolute"
+        })
+        $(".base-ul").css({
+            transform:"translateX(0)",
+            transition:"transform .3s",
+            visibility: "visible",
+            opacity:1,
+            position:"relative"
+        })
+    })
+    $(".pro").click(function(){
+        // $(".baseic-content").find("ul").addClass("cssmove")
+        $(".baseic-content").find("ul").css({
+            transform:"translateX(100%)",
+            visibility: "hidden",
+            opacity: 0,
+            "z-index": 1,
+            position: "absolute"
+        })
+        $(".pro-ul").css({
+            transform:"translateX(0)",
+            transition:"transform .3s",
+            visibility: "visible",
+            opacity:1,
+            position:"relative"
+        })
+    })
+    $(".seo").click(function(){
+        // $(".baseic-content").find("ul").addClass("cssmove")
+        $(".baseic-content").find("ul").css({
+            transform:"translateX(100%)",
+            visibility: "hidden",
+            opacity: 0,
+            "z-index": 1,
+            position: "absolute"
+        })
+        $(".seo-ul").css({
+            transform:"translateX(0)",
+            transition:"transform .3s",
+            visibility: "visible",
+            opacity:1,
+            position:"relative"
+        })
+    })
+})   
+</script>

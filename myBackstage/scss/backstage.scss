@@ -394,6 +394,12 @@ header{
                 text-align:center; 
                 color:#3bb4f2;
             }
+            a:hover{
+                background-color:#f5f5f5;
+            }
+            a~span:hover{
+                color:  #095f8a;
+            }
         }
    }
 }
@@ -426,6 +432,9 @@ header{
                 cursor:pointer;
                 padding: .07rem .15rem;
                 border-bottom: 1px solid #ddd;
+                i{
+                    float:right;
+                }
             }
             h2+ul{
                 padding: .15rem .15rem  .2rem;

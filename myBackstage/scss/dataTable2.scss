@@ -1,0 +1,103 @@
+@charset "utf-8";
+/*css document*/
+body,div,p,ul,ol,li,dl,dt,dd,table,tr,td,th,form,h1,h2,h3,h4,h5,h6,input,textarea,fieldset,figure{
+	margin:0;
+	padding:0;
+}
+html{
+    font-size:100px;
+    height:100%;    
+}
+body{
+	font-family:"微软雅黑",Arial;
+    background: url(../img/bg-2.png) repeat;
+    background-size:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:.15rem;
+    box-sizing:border-box;
+    // flex-direction:column;  
+    height:100%;
+    // overflow-y:hidden;
+}
+ul,ol{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+img{
+	border:0;
+	display: block;
+}
+.left{
+    display:flex;
+    flex-flow: row wrap;
+    width:6.45rem;
+}
+.main{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%
+}
+.top{
+    width:10.9rem;
+    height:.6rem;
+    box-sizing: border-box;
+    border:.15rem solid transparent;
+    border-image:url(../img/money-2.png) 15;
+    // margin-right:.05rem;
+    background-color:#0f314a;
+}
+.content{
+    width:10.9rem;
+    display:flex;
+    flex-flow: row wrap;
+}
+.one{
+    width:4.45rem;
+    height:2.74rem;
+    box-sizing: border-box;
+    border:.2rem solid transparent;
+    border-image:url(../img/money-2.png) 20;
+    margin-right:.05rem;
+    background-color:#0f314a;
+}
+.two{
+    width:6.4rem;
+    height:2.74rem;
+    box-sizing: border-box;
+    border:.2rem solid transparent;
+    border-image:url(../img/money-2.png) 20;
+    // margin-right:.05rem;
+    background-color:#0f314a;
+}
+.three{
+    width:4.45rem;
+    height:1.75rem;
+    box-sizing: border-box;
+    border:.2rem solid transparent;
+    border-image:url(../img/money-2.png) 20;
+    margin-right:.05rem;
+    background-color:#0f314a;
+}
+.four{
+    width:4.85rem;
+    height:1.75rem;
+    box-sizing: border-box;
+    border:.2rem solid transparent;
+    border-image:url(../img/money-2.png) 20;
+    margin-right:.05rem;
+    background-color:#0f314a;
+}
+.five{
+    width:1.5rem;
+    height:1.75rem;
+    box-sizing: border-box;
+    border:.2rem solid transparent;
+    border-image:url(../img/money-2.png) 20;
+    // margin-right:.05rem;
+    background-color:#0f314a;
+}

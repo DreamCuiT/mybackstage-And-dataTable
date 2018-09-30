@@ -169,12 +169,33 @@
                     <td><span>+<i>2</i></span></td>
                     <td><div><i class="iconfont icon-iconfont_shezhi"></i><span></span></div></td>
                 </tr>
+                <tr>
+                    <td>2</td>
+                    <td>所得税</td>
+                    <td>设配温昂之昂</td>
+                    <td><span>+<i>2</i></span></td>
+                    <td><div><i class="iconfont icon-iconfont_shezhi"></i><span></span></div></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>所得税</td>
+                    <td>设配温昂之昂</td>
+                    <td><span>+<i>2</i></span></td>
+                    <td><div><i class="iconfont icon-iconfont_shezhi"></i><span></span></div></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>所得税</td>
+                    <td>设配温昂之昂</td>
+                    <td><span>+<i>2</i></span></td>
+                    <td><div><i class="iconfont icon-iconfont_shezhi"></i><span></span></div></td>
+                </tr>
             </table>
             <div class="file-task">
                <div>
                     <div>
-                        <h2><span>文件上传</span></h2>
-                        <ul>
+                        <h2><span>文件上传</span><i class="iconfont icon-bottom"></i></h2>
+                        <ul class="file-ul">
                             <li>
                                 <i class="iconfont icon-shangchuan"></i>
                                 <span>Kong-cetian.Mp3</span>
@@ -202,7 +223,7 @@
                         </ul>
                     </div>
                     <div>
-                        <h2><span>浏览器统计</span></h2>
+                        <h2><span>浏览器统计</span><i class="iconfont icon-bottom"></i></h2>
                         <table class="call">
                             <thead>
                                 <tr>
@@ -243,7 +264,7 @@
                </div>
                <div>
                     <div>
-                        <h2><span>任务task</span></h2>
+                        <h2><span>任务task</span><i class="iconfont icon-bottom"></i></h2>
                         <ul>
                             <li>
                                 <h5> Posted on 25/1/2120 by John Clark</h5>
@@ -263,7 +284,7 @@
                         </ul>
                     </div>
                     <div>
-                        <h2><span>最近留言</span></h2>
+                        <h2><span>最近留言</span><i class="iconfont icon-bottom"></i></h2>
                         <ul>
                             <li>
                                 <a href="#"><img src="img/new-1.jpg " alt=""></a>
@@ -357,6 +378,12 @@ function exitScreen(){
         cfs.call(el);
     }
 }
+//file
+$(".iconfont").on("click",function(){
+    $(this).parent("h2").next("ul").slideToggle();
+    $(this).parent("h2").next("ul").next("p").slideToggle();
+    $(this).parent("h2").next("table").slideToggle();
+})
 $(".quanping").toggle(function(){    
     fullScreen();
 },function(){    

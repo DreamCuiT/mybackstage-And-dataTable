@@ -12,21 +12,117 @@
     <div class="main">
         <div class="left">
             <div class="user-numer" id="map"></div>
-            <div class="inter-data"></div>
-            <div class="telephone-traffic"></div>
-            <div class="note"></div>
+            <div class="inter-data">
+				<h5>流量上网</h5>
+				<div class="data">
+					<div>
+						<span>2G流量(GB)</span>
+						<i>610423</i>
+					</div>
+					<div>
+						<span>3G流量(GB)</span>
+						<i>610423</i>
+					</div>
+					<div>
+						<span>4G流量(GB)</span>
+						<i>610423</i>
+					</div>
+					<div>
+						<span>WAGDW上网资费</span>
+						<i>610423</i>
+					</div>
+				</div>
+				<div class="histogram">
+					<div id="container" style="width:1.12rem;height:.97rem"></div>
+					<div id="container2" style="width:1.12rem;height:.97rem"></div>
+				</div>
+			</div>
+            <div class="telephone-traffic" id="pt" style="width:2.6rem;">
+
+			</div>
+            <div class="note">
+				<h5>短信业务</h5>
+				<div style="display:flex;flex-flow:row nowrap">
+					<div id="pie-2" style="width:3rem;height:1.2rem"></div>
+					<div style="display:flex;flex-flow:row wrap;">
+						<div style="width:.75rem;height:.6rem;background:url(img/border-4.png)  no-repeat;background-size:100% 100%;">
+							<div style="font-size:.12rem;text-align:center;color:#fff">1334</div>
+							<div style="font-size:.12rem;text-align:center;color:#fff">总量</div>
+						</div>
+						<div style="width:.75rem;height:.6rem;background:url(img/border-4.png)  no-repeat;background-size:100% 100%;">
+							<div style="font-size:.12rem;text-align:center;color:#fff">1334</div>
+							<div style="font-size:.12rem;text-align:center;color:#fff">总量</div>
+						</div>
+
+						<div style="width:.75rem;height:.6rem;background:url(img/border-4.png)  no-repeat;background-size:100% 100%;">
+							<div style="font-size:.12rem;text-align:center;color:#fff">1334</div>
+							<div style="font-size:.12rem;text-align:center;color:#fff">总量</div>
+						</div>
+						<div style="width:.75rem;height:.6rem;background:url(img/border-4.png)  no-repeat;background-size:100% 100%;">
+							<div style="font-size:.12rem;text-align:center;color:#fff">1334</div>
+							<div style="font-size:.12rem;text-align:center;color:#fff">总量</div>
+						</div>
+					</div>
+				</div>
+				<div style="display:flex;flex-flow:row wrap">
+					<div style="width:.75rem;height:.6rem;background:url(img/border-4.png)  no-repeat;background-size:100% 100%;">
+						<div style="font-size:.12rem;text-align:center;color:#fff">1334</div>
+							<div style="font-size:.12rem;text-align:center;color:#fff">总量</div>
+					</div>
+						<div style="width:.75rem;height:.6rem;background:url(img/border-4.png)  no-repeat;background-size:100% 100%;">
+							<div style="font-size:.12rem;text-align:center;color:#fff">1334</div>
+							<div style="font-size:.12rem;text-align:center;color:#fff">总量</div>
+						</div>
+						<div style="width:.75rem;height:.6rem;background:url(img/border-4.png)  no-repeat;background-size:100% 100%;">
+							<div style="font-size:.12rem;text-align:center;color:#fff">1334</div>
+							<div style="font-size:.12rem;text-align:center;color:#fff">总量</div>
+						</div>
+						<div style="width:.75rem;height:.6rem;background:url(img/border-4.png)  no-repeat;background-size:100% 100%;">
+							<div style="font-size:.12rem;text-align:center;color:#fff">1334</div>
+							<div style="font-size:.12rem;text-align:center;color:#fff">总量</div>
+						</div>
+				</div>
+			</div>
         </div>
         <div class="right">
-            <div class="real-time"></div>
+            <div class="real-time">
+				<div>
+					<div id="map2" style="height:2.65rem"></div>
+				</div>
+				<div class="pie-box">
+					<div class="pie">
+						<div id="pie" style="width:.6rem;height:.6rem;margin:0 auto"></div>
+						<div style="font-size:.05rem;color:#fff;text-align:center">彩铃成功率</div>
+					</div>
+					<div class="pie">
+							<div id="pie2" style="width:.6rem;height:.6rem;margin:0 auto"></div>
+							<div style="font-size:.05rem;color:#fff;text-align:center">彩铃成功率</div>
+					</div>
+					<div class="pie">
+							<div id="pie3" style="width:.6rem;height:.6rem;margin:0 auto"></div>
+							<div style="font-size:.05rem;color:#fff;text-align:center">彩铃成功率</div>
+					</div>
+					<div class="pie">
+							<div id="pie4" style="width:.6rem;height:.6rem;margin:0 auto"></div>
+							<div style="font-size:.05rem;color:#fff;text-align:center">彩铃成功率</div>
+					</div>
+				</div>
+				<div class="" id="line" style="width:4.12rem;height:2rem"></div>
+			</div>
         </div>
 	</div>
 </body>
 </html>
 <script src="js/jquery-1.8.3.min.js"></script>
-<script src="js/highmaps.js"></script>
+<script src="js/highcharts.js"></script>
+<script src="js/map.js"></script>
+<script src="https://data.jianshukeji.com/geochina/shanxi2.js"></script> 	
+<!-- <script src="js/highcharts-more.js"></script> -->
 <script src="js/dataTable.js"></script>
-<script src="https://data.jianshukeji.com/geochina/shanxi2.js"></script>
 <script>
+//全局配置
+Highcharts.setOptions({
+})
 // 随机数据
 var data = [{"name":"西安","value":22},{"name":"铜川","value":69},{"name":"宝鸡","value":50},{"name":"咸阳","value":4},{"name":"渭南","value":31},{"name":"延安","value":34},{"name":"汉中","value":2},{"name":"榆林","value":88},{"name":"安康","value":93},{"name":"商洛","value":70}];
 // 初始化图表
@@ -35,6 +131,9 @@ var map = new Highcharts.mapChart('map', {
 		style:{
 		}
 	},
+	credits: {//去除版权信息
+			enabled: false
+		},
 	title: {
 		text: '陕西省在线用户人数'
 	},
@@ -50,67 +149,609 @@ var map = new Highcharts.mapChart('map', {
 		joinBy: 'name' // 根据 name 属性进行关联
 	}]
 });
+var map2 = new Highcharts.mapChart('map2', {
+	chart:{
+		style:{
+		}
+	},
+	credits: {//去除版权信息
+			enabled: false
+		},
+	title: {
+		text: '实施警告'
+	},
+	colorAxis: {
+		min: 0,
+		minColor: 'rgb(255,255,255)',
+		maxColor: '#006cee'
+	},
+	series: [{
+		data: data,
+		name: '随机数据',
+		mapData: Highcharts.maps['cn/shanxi2'],
+		joinBy: 'name' // 根据 name 属性进行关联
+	}]
+});
 $(".highcharts-title").attr({x:"85"});
 $(".highcharts-legend").css({display:"none"});
-$(".highcharts-credits").css({display:"none"})
 $(".highcharts-series").attr({transform:"translate(-20,53) scale(1.5 1.5)"})
-</script>
-<!-- <script>
-    Highcharts.mapChart('container', {
+
+var chart = Highcharts.chart('container', {
 	chart: {
-		spacingBottom: 20
+		type: 'column'
 	},
-	title : {
-		text : '陕西省在线用户人数'
+	credits: {//去除版权信息
+			enabled: false
+		},
+	title: {
+		text: 'BRAS(TOP5)',
+		style: {
+				color: '#fff',
+				"font-size":".09rem"
+			}
 	},
-	legend: {
-		enabled: true
+	legend: {//图例开关
+			enabled: false
+		},
+	plotOptions: {//数据类配置
+		series: {
+			borderRadius: 3,
+			borderWidth:1,
+			color:"red",
+		}
+	},
+	xAxis: {
+		categories: ['一', '二', '三', '四', '五'],
+		tickLength: 0,//刻度线长度
+		tickPixelInterval: 100,
+		labels: {
+				style: {
+					color: '#fff',
+					fontSize:".05rem"
+				},
+				autoRotation:0,
+				lineColor:"#9fb3be",
+				lineWidth:".05rem"
+			}
+	},
+	yAxis: {
+		max:100,
+		lineColor: 'red',
+		lineWidth: 1,
+		categories: [0, 20, 40, 60, 80, 100],
+		title:{
+				text: null,
+			},
+		tickPixelInterval:50,
+		tickLength:20,
+		labels: {
+			x:0,
+			style: {
+					color: '#fff',
+					fontSize:".05rem"
+				},
+		},
+	},
+	series: [{ 
+		data: [75, 60, 95, 50, 35]
+	}],
+});
+var chart2 = Highcharts.chart('container2', {
+	chart: {
+		type: 'column'
+	},
+	credits: {//去除版权信息
+			enabled: false
+		},
+	title: {
+		text: 'BRAS(TOP5)',
+		style: {
+				color: '#fff',
+				"font-size":".09rem"
+			}
+	},
+	legend: {//图例开关
+			enabled: false
+		},
+	plotOptions: {//数据类配置
+		series: {
+			borderRadius: 3,
+			borderWidth:1,
+			color:"red",
+		}
+	},
+	xAxis: {
+		categories: ['一', '二', '三', '四', '五'],
+		tickLength: 0,//刻度线长度
+		tickPixelInterval: 100,
+		labels: {
+				style: {
+					color: '#fff',
+					fontSize:".05rem"
+				},
+				autoRotation:0,
+				lineColor:"#9fb3be",
+				lineWidth:".05rem"
+			}
+	},
+	yAxis: {
+		max:100,
+		lineColor: 'red',
+		lineWidth: 1,
+		categories: [0, 20, 40, 60, 80, 100],
+		title:{
+				text: null,
+			},
+		tickPixelInterval:50,
+		tickLength:20,
+		labels: {
+			x:0,
+			style: {
+					color: '#fff',
+					fontSize:".05rem"
+				},
+		},
+	},
+	series: [{ 
+		data: [75, 60, 95, 50, 35]
+	}],
+});
+
+var chart3 = Highcharts.chart('pie', {
+    chart: {
+		spacing : [40, 0 , 40, 0],
+		width:60,
+		height:60,
+		spacing:0
+    },
+    title: {
+        floating:true,
+        text:null
+	},
+	credits: {//去除版权信息
+			enabled: false
+		},
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            },
+            point: {
+               
+            },
+        }
+    },
+    series: [{
+        type: 'pie',
+        innerSize: '80%',
+        name: '市场份额',
+        data: [
+            {name:'Firefox',   y: 45.0, url : 'http://bbs.hcharts.cn'},
+            ['IE',       26.8],
+            {
+                name: 'Chrome',
+                y: 12.8,
+                sliced: true,
+                selected: true,
+                url: 'http://www.hcharts.cn'
+            },
+            ['Safari',    8.5],
+            ['Opera',     6.2],
+            ['其他',   0.7]
+        ]
+    }]
+}, function(c) { // 图表初始化完毕后的会掉函数
+    // 环形图圆心
+    var centerY = c.series[0].center[1],
+        titleHeight = parseInt(c.title.styles.fontSize);
+    // 动态设置标题位置
+    c.setTitle({
+        y:centerY + titleHeight/2
+    });
+});
+
+var chart8 = Highcharts.chart('pie2', {
+    chart: {
+		spacing : [40, 0 , 40, 0],
+		width:60,
+		height:60,
+		spacing:0
+    },
+    title: {
+        floating:true,
+        text:null
+	},
+	credits: {//去除版权信息
+			enabled: false
+		},
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            },
+            point: {
+               
+            },
+        }
+    },
+    series: [{
+        type: 'pie',
+        innerSize: '80%',
+        name: '市场份额',
+        data: [
+            {name:'Firefox',   y: 45.0, url : 'http://bbs.hcharts.cn'},
+            ['IE',       26.8],
+            {
+                name: 'Chrome',
+                y: 12.8,
+                sliced: true,
+                selected: true,
+                url: 'http://www.hcharts.cn'
+            },
+            ['Safari',    8.5],
+            ['Opera',     6.2],
+            ['其他',   0.7]
+        ]
+    }]
+}, function(c) { // 图表初始化完毕后的会掉函数
+    // 环形图圆心
+    var centerY = c.series[0].center[1],
+        titleHeight = parseInt(c.title.styles.fontSize);
+    // 动态设置标题位置
+    c.setTitle({
+        y:centerY + titleHeight/2
+    });
+});
+
+var chart7 = Highcharts.chart('pie3', {
+    chart: {
+		spacing : [40, 0 , 40, 0],
+		width:60,
+		height:60,
+		spacing:0
+    },
+    title: {
+        floating:true,
+        text:null
+	},
+	credits: {//去除版权信息
+			enabled: false
+		},
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            },
+            point: {
+               
+            },
+        }
+    },
+    series: [{
+        type: 'pie',
+        innerSize: '80%',
+        name: '市场份额',
+        data: [
+            {name:'Firefox',   y: 45.0, url : 'http://bbs.hcharts.cn'},
+            ['IE',       26.8],
+            {
+                name: 'Chrome',
+                y: 12.8,
+                sliced: true,
+                selected: true,
+                url: 'http://www.hcharts.cn'
+            },
+            ['Safari',    8.5],
+            ['Opera',     6.2],
+            ['其他',   0.7]
+        ]
+    }]
+}, function(c) { // 图表初始化完毕后的会掉函数
+    // 环形图圆心
+    var centerY = c.series[0].center[1],
+        titleHeight = parseInt(c.title.styles.fontSize);
+    // 动态设置标题位置
+    c.setTitle({
+        y:centerY + titleHeight/2
+    });
+});
+
+var chart6 = Highcharts.chart('pie4', {
+    chart: {
+		spacing : [40, 0 , 40, 0],
+		width:60,
+		height:60,
+		spacing:0
+    },
+    title: {
+        floating:true,
+        text:null
+	},
+	credits: {//去除版权信息
+			enabled: false
+		},
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            },
+            point: {
+               
+            },
+        }
+    },
+    series: [{
+        type: 'pie',
+        innerSize: '80%',
+        name: '市场份额',
+        data: [
+            {name:'Firefox',   y: 45.0, url : 'http://bbs.hcharts.cn'},
+            ['IE',       26.8],
+            {
+                name: 'Chrome',
+                y: 12.8,
+                sliced: true,
+                selected: true,
+                url: 'http://www.hcharts.cn'
+            },
+            ['Safari',    8.5],
+            ['Opera',     6.2],
+            ['其他',   0.7]
+        ]
+    }]
+}, function(c) { // 图表初始化完毕后的会掉函数
+    // 环形图圆心
+    var centerY = c.series[0].center[1],
+        titleHeight = parseInt(c.title.styles.fontSize);
+    // 动态设置标题位置
+    c.setTitle({
+        y:centerY + titleHeight/2
+    });
+});
+
+var chart4 = Highcharts.chart('line', {
+	title: {
+		text: '标题标题',
+		align:"left",
+		style:{
+			fontSize:".16rem",
+			"color":"#049191"
+		},
+		y:10
+	},
+	legend:{
+		verticalAlign: 'top',
+		align: 'right',
+		
+	},
+	credits: {//去除版权信息
+			enabled: false
+		},
+	yAxis: {
+		title:{
+				text: null,
+			},
+		alternateGridColor: '#FDFFD5',
+		tickWidth:".3rem",
+		tickAmount: 8,
+		title:{
+			text:"单位（GB）",
+			align:"high",
+			rotation:0,
+			offset: 0,
+			y:-10	
+		},
 	},
 	plotOptions: {
-		map: {
-			allAreas: false,
-			joinBy: ['iso-a2', 'code'],
+		series: {
+			label: {
+				connectorAllowed: false
+			},
+			pointStart: 2010
+		}
+	},
+	series: [{
+		name: '安装，实施人员',
+		data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+	}, {
+		name: '工人',
+		data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+	}, {
+		name: '销售',
+		data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
+	}],
+	responsive: {
+		rules: [{
+			condition: {
+				maxWidth: 500
+			},
+			chartOptions: {
+				legend: {	
+					align: 'right',
+					verticalAlign: 'top',
+					itemStyle:{
+						color:"#fff",
+						fontSize:".1rem"
+					},
+					itemHoverStyle:{
+						color:"#fff"
+					}
+				}
+			}
+		}]
+	}
+});
+
+var chart5 = Highcharts.chart('pie-2', {
+    chart: {
+		spacing : [40, 0 , 40, 0],
+		width:150,
+		height:120,
+		margin:0
+    },
+    title: {
+		floating:true,
+		text:null
+	},
+	credits: {//去除版权信息
+			enabled: false
+		},
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            },
+            point: {
+                // events: {
+                //     mouseOver: function(e) {  // 鼠标滑过时动态更新标题
+                //         // 标题更新函数，API 地址：https://api.hcharts.cn/highcharts#Chart.setTitle
+                //         chart.setTitle({
+                //             text: e.target.name+ '\t'+ e.target.y + ' %'
+                //         });
+                //     }
+                //     , 
+                //     click: function(e) { // 同样的可以在点击事件里处理
+                //         chart.setTitle({
+                //             text: e.point.name+ '\t'+ e.point.y + ' %'
+                //         });
+                //     }
+                // }
+            },
+        }
+    },
+    series: [{
+        type: 'pie',
+        innerSize: '80%',
+        name: '市场份额',
+        data: [
+            {name:'Firefox',   y: 45.0, url : 'http://bbs.hcharts.cn'},
+            ['IE',       26.8],
+            {
+                name: 'Chrome',
+                y: 12.8,
+                sliced: true,
+                selected: true,
+                url: 'http://www.hcharts.cn'
+            },
+            ['Safari',    8.5],
+            ['Opera',     6.2],
+            ['其他',   0.7]
+        ]
+    }]
+}, function(c) { // 图表初始化完毕后的会掉函数
+    // 环形图圆心
+    var centerY = c.series[0].center[1],
+        titleHeight = parseInt(c.title.styles.fontSize);
+    // 动态设置标题位置
+    c.setTitle({
+        y:centerY + titleHeight/2
+    });
+});
+
+Highcharts.chart('pt', {
+	chart: {
+		plotBackgroundColor: null,
+		plotBorderWidth: null,
+		plotShadow: false,
+		type: 'pie'
+	},
+	title: {
+		text: '2018年1月浏览器市场份额'
+	},
+	tooltip: {
+		pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+	},
+	plotOptions: {
+		pie: {
+			allowPointSelect: true,
+			cursor: 'pointer',
 			dataLabels: {
 				enabled: true,
-				color: 'white',
-				formatter: function () {
-					if (this.point.properties && this.point.properties.labelrank.toString() < 5) {
-						return this.point.properties['iso-a2'];
-					}
-				},
-				format: null,
+				format: '<b>{point.name}</b>: {point.percentage:.1f} %',
 				style: {
-					fontWeight: 'bold'
+					color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
 				}
-			},
-			mapData: Highcharts.maps['custom/europe'],
-			tooltip: {
-				headerFormat: '',
-				pointFormat: '{point.name}: <b>{series.name}</b>'
 			}
 		}
 	},
-	series : [{
-		name: 'UTC',
-		data: Highcharts.map(['IE', 'IS', 'GB', 'PT'], function (code) {
-			return { code: code };
-		})
-	}, {
-		name: 'UTC + 1',
-		data: Highcharts.map(['NO', 'SE', 'DK', 'DE', 'NL', 'BE', 'LU', 'ES', 'FR', 'PL', 'CZ', 'AT', 'CH', 'LI', 'SK', 'HU',
-							  'SI', 'IT', 'SM', 'HR', 'BA', 'YF', 'ME', 'AL', 'MK'], function (code) {
-			return { code: code };
-		})
-	}, {
-		name: 'UTC + 2',
-		data: Highcharts.map(['FI', 'EE', 'LV', 'LT', 'BY', 'UA', 'MD', 'RO', 'BG', 'GR', 'TR', 'CY'], function (code) {
-			return { code: code };
-		})
-	}, {
-		name: 'UTC + 3',
-		data: Highcharts.map(['RU'], function (code) {
-			return { code: code };
-		})
+	series: [{
+		name: 'Brands',
+		colorByPoint: true,
+		data: [{
+			name: 'Chrome',
+			y: 61.41,
+			sliced: true,
+			selected: true
+		}, {
+			name: 'Internet Explorer',
+			y: 11.84
+		}, {
+			name: 'Firefox',
+			y: 10.85
+		}, {
+			name: 'Edge',
+			y: 4.67
+		}, {
+			name: 'Safari',
+			y: 4.18
+		}, {
+			name: 'Sogou Explorer',
+			y: 1.64
+		}, {
+			name: 'Opera',
+			y: 1.6
+		}, {
+			name: 'QQ',
+			y: 1.2
+		}, {
+			name: 'Other',
+			y: 2.61
+		}]
 	}]
 });
-</script> -->
+</script>

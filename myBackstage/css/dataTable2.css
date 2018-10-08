@@ -46,7 +46,15 @@ img {
   box-sizing: border-box;
   border: .15rem solid transparent;
   border-image: url(../img/money-2.png) 15;
-  background-color: #0f314a; }
+  background-color: #0f314a;
+  display: flex;
+  justify-content: space-around; }
+  .top div {
+    font-size: .14rem;
+    color: #fff; }
+    .top div span {
+      font-size: .16rem;
+      color: orange; }
 
 .content {
   width: 10.9rem;
@@ -68,7 +76,8 @@ img {
   box-sizing: border-box;
   border: .2rem solid transparent;
   border-image: url(../img/money-2.png) 20;
-  background-color: #0f314a; }
+  background-color: #0f314a;
+  display: flex; }
 
 .three {
   width: 4.45rem;
@@ -95,3 +104,12 @@ img {
   border: .2rem solid transparent;
   border-image: url(../img/money-2.png) 20;
   background-color: #0f314a; }
+  .five div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; }
+    .five div div {
+      font-size: .16rem;
+      color: #fff;
+      text-align: center; }

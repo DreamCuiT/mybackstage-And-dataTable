@@ -51,6 +51,48 @@ img {
   border: .2rem solid transparent;
   border-image: url(../img/border.png) 20;
   margin-right: .05rem; }
+  .inter-data h5 {
+    font-size: .18rem;
+    color: #fff;
+    font-weight: 400;
+    line-height: .2rem; }
+  .inter-data .data {
+    margin-top: .2rem;
+    display: flex;
+    flex-flow: row wrap; }
+    .inter-data .data div {
+      background: url(../img/border-4.png) no-repeat;
+      background-size: 100%;
+      width: 1.12rem;
+      height: .56rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: .05rem; }
+      .inter-data .data div span {
+        font-size: .05rem;
+        color: #fff; }
+      .inter-data .data div i {
+        font-style: normal;
+        font-size: .16rem;
+        color: #049191; }
+
+.histogram {
+  display: flex;
+  flex-flow: row wrap; }
+
+.pie-box {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.pie {
+  background: url(../img/border-4.png) no-repeat;
+  background-size: 100% 100%;
+  width: .79rem;
+  height: .79rem;
+  margin: 0 .05rem; }
 
 .real-time {
   width: 4.52rem;
@@ -75,3 +117,8 @@ img {
   border: .2rem solid transparent;
   border-image: url(../img/border-2.png) 20;
   margin-top: .1rem; }
+  .note h5 {
+    font-size: .16rem;
+    color: #fff;
+    font-weight: 400;
+    text-align: left; }

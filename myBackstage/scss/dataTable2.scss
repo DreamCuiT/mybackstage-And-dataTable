@@ -50,6 +50,16 @@ img{
     border-image:url(../img/money-2.png) 15;
     // margin-right:.05rem;
     background-color:#0f314a;
+    display:flex;
+    justify-content: space-around;
+    div{
+        font-size:.14rem;
+        color:#fff;
+        span{
+            font-size:.16rem;
+            color:orange;
+        }
+    }
 }
 .content{
     width:10.9rem;
@@ -73,6 +83,7 @@ img{
     border-image:url(../img/money-2.png) 20;
     // margin-right:.05rem;
     background-color:#0f314a;
+    display:flex;
 }
 .three{
     width:4.45rem;
@@ -100,4 +111,15 @@ img{
     border-image:url(../img/money-2.png) 20;
     // margin-right:.05rem;
     background-color:#0f314a;
+    div{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        height:100%;
+        div{
+            font-size:.16rem;
+            color:#fff;
+            text-align:center;
+        }
+    }
 }

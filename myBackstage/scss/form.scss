@@ -214,3 +214,11 @@
         margin-right:.05rem;  
     }
 }
+@media screen and (max-width){
+    .left-menu{
+        display: none;
+    }
+    .right-table{
+        width:100% !important;
+    }
+}

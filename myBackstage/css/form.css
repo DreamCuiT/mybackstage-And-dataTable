@@ -172,3 +172,9 @@
     background-color: #0e90d2;
     cursor: pointer;
     margin-right: .05rem; }
+
+@media screen and (max-width) {
+  .left-menu {
+    display: none; }
+  .right-table {
+    width: 100% !important; } }

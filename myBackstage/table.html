@@ -58,8 +58,17 @@
                         <td>2014年9月4日 7:28:47</td>
                         <td class="last-td">
                            <p>
-                                <span><i class="iconfont icon-form"></i>编辑</span><span><i class="iconfont icon-copy"></i>复制</span><span><i class="iconfont icon-Remove"></i>删除</span>
+                                <span class="updata"><i class="iconfont icon-form"></i>编辑</span><span><i class="iconfont icon-copy"></i>复制</span><span class="delete"><i class="iconfont icon-Remove"></i>删除</span>
                            </p>
+                           <div class="updata-box">
+                            <form action="">
+                                 <p><label for="id">id</label><input type="text" id="id"></p>
+                                 <p><label for="title">标题</label><input type="text" id="title"></p>
+                                 <p><label for="sort">类别</label><input type="text" id="sort"></p>
+                                <p> <label for="writer">作者</label><input type="text" id="writer"></p>
+                                <input class="btn" type="button" value="修改"><input type="button" value="取消" onclick="no()">
+                            </form>
+                         </div>
                         </td>
                     </tr>
                     <tr>
@@ -70,9 +79,18 @@
                         <td>测试</td>
                         <td>2014年9月4日 7:28:47</td>
                         <td class="last-td">
-                            <p>
-                                <span><i class="iconfont icon-form"></i>编辑</span><span><i class="iconfont icon-copy"></i>复制</span><span><i class="iconfont icon-Remove"></i>删除</span>
-                            </p>
+                           <p>
+                                <span class="updata"><i class="iconfont icon-form"></i>编辑</span><span><i class="iconfont icon-copy"></i>复制</span><span class="delete"><i class="iconfont icon-Remove"></i>删除</span>
+                           </p>
+                           <div class="updata-box">
+                            <form action="">
+                                 <p><label for="id">id</label><input type="text" id="id"></p>
+                                 <p><label for="title">标题</label><input type="text" id="title"></p>
+                                 <p><label for="sort">类别</label><input type="text" id="sort"></p>
+                                <p> <label for="writer">作者</label><input type="text" id="writer"></p>
+                                <input class="btn" type="button" value="修改"><input type="button" value="取消" onclick="no()">
+                            </form>
+                         </div>
                         </td>
                     </tr>
                 </tbody>
@@ -117,25 +135,60 @@
         })
         $(".dataSave")
         $(".dataAudit")
-        $(".dataRemove")
-        
+        $(".dataRemove").click(function(){
+            
+        })
+        $(".updata").click(function(){
+            $(".updata-box").css({
+                display:"block",
+            })
+        })
+        $(".delete").click(function(){
+            $(this).parents("td").find(".updata-box").css({
+                display:"block",
+            })
+            $(".updata-box").html("<form><p>你确定删除吗？</p><input type='button' value='确定' class='yes'><input type='button' value='取消'></form>") 
+            $(".yes").click(function(){
+                $(this).parents("tr").remove();
+            })
+            // $(".no").click(function(){
+            //     $(this).parents("td").find(".updata-box").css({
+            //         display:"none",
+            //     });
+            // })
+        })
+        $(".btn").click(function(){
+            let data = {
+            id:$(".updata-box").find("input").eq(0).val(),
+            title:$(".updata-box").find("input").eq(1).val(),
+            sort:$(".updata-box").find("input").eq(2).val(),
+            writer:$(".updata-box").find("input").eq(3).val()
+            };
+            console.log(data);
+            let time = new Date();
+            let str = time.getFullYear()+"年"+time.getMonth()+"月"+time.getDate()+"日"+time.getHours()+":"+time.getMinutes()+":"+time.getSeconds();
+            $(this).parents("tr").find("td").eq(1).text(data.id);
+            $(this).parents("tr").find("td").eq(2).text(data.title);
+            $(this).parents("tr").find("td").eq(3).text(data.sort);
+            $(this).parents("tr").find("td").eq(4).text(data.writer);
+            $(this).parents("tr").find("td").eq(5).text(str);
+            $(".updata-box").css({
+                display:"none",
+            })
+        })
     })
     function no(){
         $(".add").css({
             display:"none"
         })
+        $(".updata-box").css({
+            display:"none"
+        })
     }
     function add(){
-        // let data = {
-        //     id:$("#id").val(),
-        //     title:$("#title").val(),
-        //     sort:$("#sort").val(),
-        //     writer:$("#writer").val()
-        // }
-        // console.log(data);
         let time = new Date();
         let str = time.getFullYear()+"年"+time.getMonth()+"月"+time.getDate()+"日"+time.getHours()+":"+time.getMinutes()+":"+time.getSeconds();
-        $(".table-data").append("<tr><td><input type='checkbox'></td><td>"+$("#id").val()+"</td><td><a href='#'>"+$("#title").val()+"</a></td><td>"+$("#sort").val()+"</td><td>"+$("#writer").val()+"</td><td>"+str+"</td><td class='last-td'><p><span><i class='iconfont icon-form'></i>编辑</span><span><i class='iconfont icon-copy'></i>复制</span><span><i class='iconfont icon-Remove'></i>删除</span></p></td></tr>")
+        $(".table-data").append("<tr><td><input type='checkbox'></td><td>"+$(".add").find("input").eq(0).val()+"</td><td><a href='#'>"+$(".add").find("input").eq(2).val()+"</a></td><td>"+$(".add").find("input").eq(3).val()+"</td><td>"+$(".add").find("input").eq(4).val()+"</td><td>"+str+"</td><td class='last-td'><p><span class='updata'><i class='iconfont icon-form'></i>编辑</span><span><i class='iconfont icon-copy'></i>复制</span><span class='delete'><i class='iconfont icon-Remove'></i>删除</span></p><div class='updata-box'><form action=''><p><label for='id'>id</label><input type='text' id='id'></p><p><label for='title'>标题</label><input type='text' id='title'></p><p><label for='sort'>类别</label><input type='text' id='sort'></p><p> <label for='writer'>作者</label><input type='text' id='writer'></p><input class='btn' type='button' value='修改'><input type='button' value='取消' onclick='no()'></form></div></td></tr>")
         $(".add").css({
             display:"none"
         })

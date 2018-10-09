@@ -122,6 +122,9 @@
 <script>
 //全局配置
 Highcharts.setOptions({
+	credits: {//去除版权信息
+			enabled: false
+		},
 })
 // 随机数据
 var data = [{"name":"西安","value":22},{"name":"铜川","value":69},{"name":"宝鸡","value":50},{"name":"咸阳","value":4},{"name":"渭南","value":31},{"name":"延安","value":34},{"name":"汉中","value":2},{"name":"榆林","value":88},{"name":"安康","value":93},{"name":"商洛","value":70}];
@@ -643,7 +646,8 @@ var chart5 = Highcharts.chart('pie-2', {
                 enabled: true,
                 format: '<b>{point.name}</b>: {point.percentage:.1f} %',
                 style: {
-                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
+					fontSize:8
                 }
             },
             point: {
@@ -693,7 +697,7 @@ var chart5 = Highcharts.chart('pie-2', {
     });
 });
 
-Highcharts.chart('pt', {
+var chart7 = Highcharts.chart('pt', {
 	chart: {
 		plotBackgroundColor: null,
 		plotBorderWidth: null,
@@ -706,6 +710,9 @@ Highcharts.chart('pt', {
 	tooltip: {
 		pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
 	},
+	credits: {//去除版权信息
+			enabled: false
+		},
 	plotOptions: {
 		pie: {
 			allowPointSelect: true,
@@ -714,7 +721,9 @@ Highcharts.chart('pt', {
 				enabled: true,
 				format: '<b>{point.name}</b>: {point.percentage:.1f} %',
 				style: {
-					color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+					color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
+					fontSize:8
+
 				}
 			}
 		}

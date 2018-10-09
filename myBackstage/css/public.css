@@ -24,6 +24,23 @@ img {
   border: 0;
   display: block; }
 
+@media screen and (max-width: 780px) {
+  .left-menu {
+    display: none; }
+  .right-table {
+    width: 100% !important; }
+  html {
+    font-size: 50px;
+    overflow-x: hidden; }
+  .user-set > div > a > span {
+    display: none !important; }
+  .user-set > div > p > span {
+    display: none !important; }
+  .user-set > div > div {
+    right: 1rem; }
+  .quanping {
+    display: none !important; } }
+
 header {
   width: 100%;
   box-sizing: border-box;

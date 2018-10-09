@@ -201,3 +201,43 @@ table + div {
         padding: 0;
         margin: 0;
         border: 1px solid #000; }
+
+.updata-box {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 20; }
+  .updata-box form {
+    font-size: 0;
+    background-color: #fff;
+    padding: .1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .updata-box form p {
+      display: flex;
+      margin: .05rem 0;
+      font-size: .16rem;
+      border: 0; }
+      .updata-box form p label {
+        font-size: .14rem;
+        color: #000;
+        width: 20%;
+        text-align: right;
+        margin-right: .05rem; }
+      .updata-box form p input {
+        outline: 0;
+        padding: 0;
+        margin: 0;
+        border: 1px solid #000; }
+
+@media screen and (max-width) {
+  .left-menu {
+    display: none; }
+  .right-table {
+    width: 100% !important; } }
